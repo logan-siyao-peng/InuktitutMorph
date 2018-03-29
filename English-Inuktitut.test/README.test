@@ -1,0 +1,44 @@
+ACL 2005 Workshop on Building and
+Using Parallel Texts: Data Driven
+Machine Translation and Beyond
+
+Shared Task on Word Alignment
+http://www.cs.unt.edu/~rada/wpt05
+
+
+TEST DATA FOR THE ENGLISH-INUKTITUT WORD ALIGNMENT TASK
+
+
+Data
+----
+The test set for English-Inuktitut contains 75 sentences. See the
+"Guidelines" for details regarding the annotation scheme.
+
+File Naming Conventions
+-----------------------
+There is one set of files, with the English text carrying the .e extension,
+and the Inuktitut text carrying the .i extension. The file FilePairs.test 
+includes the names of this file pair, with lines in the format:
+<English_File_Name> <Inuktitut_Text_File_Name>
+
+Source and target language
+-------------------------
+For this task, English is the source language, and Inuktitut is the target
+language. Therefore, in a word alignment line:
+sentence_no position_L1 position_L2 [S|P] [confidence]
+
+position_L1 represents the position of the word within the English sentence, 
+position_L2 represents the position of the word within the Inuktitut sentence,
+
+[the first word in a sentence is at position 1]
+
+Other
+-----
+1. An alignment has to be provided for each word in the test files. If a word
+does not appear in any alignment, we assume by default a P[robable] NULL 
+alignment for that word.
+
+2. Participants are required to submit one file with alignment results.
+
+
+

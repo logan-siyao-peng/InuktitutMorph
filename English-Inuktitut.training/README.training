@@ -1,0 +1,41 @@
+ACL 2005 Workshop on Building and
+Using Parallel Texts: Data Driven
+Machine Translation and Beyond
+
+Shared Task on Word Alignment
+http://www.cs.unt.edu/~rada/wpt05
+
+
+TRAINING DATA FOR THE ENGLISH-INUKTITUT WORD ALIGNMENT TASK
+
+
+Data source
+-----------
+The English-Inuktitut training data are part of the "Nunavut Hansard".
+Please check http://www.inuktitutcomputing.ca/NunavutHansard/ for
+additional details regarding the source of these texts, and how they
+were created.
+
+Data preprocessing
+------------------
+All files were tokenized using simple regular expressions:
+    For English, a token is anything that matches
+    	"(Dr\\.|Mr\\.|Hon\\.|Ms\\.|etc\\.|[a-zA-Z'0-9]+|[^\\s\\w]+)"
+
+    For Inuktitut: "([a-zA-Z&'`0-9]+|[^\\s\\w]+)"
+
+Note that in the present transliteration of Inuktitut, a word can
+contain a glottal stop marked by "'" or an unvoiced l marked by "&".
+More detail about the Inuktitut language and the transliteration can
+be found in the document:
+http://www.inuktitutcomputing.ca/Technocrats/
+
+File naming conventions
+-----------------------
+There is 1 English file (carrying the .e extension), and 1 Inuktitut file
+(carrying the .i extension). The file FilePairs.training includes
+the names of the only file pair, with lines in the format:
+<English_Text_File_Name> <Inuktitut_Text_File_Name>
+
+Note that corresponding lines in the English and Inuktitut files are
+sentence aligned.
